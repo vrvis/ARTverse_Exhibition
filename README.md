@@ -8,5 +8,7 @@ ARTverse is funded by the netidee promotion campaign from the Internet Stiftung 
 
 More information in https://www.netidee.at/artverse
 
+You can visit the VRChat World here: https://vrchat.com/home/launch?worldId=wrld_27547c56-ccf5-47a4-9c3b-c266ed9e0b38
+
 Use the VRChat CreatorCompanion App to install the Unity Version, the VRChat SDK and open the project. Unity Version - 2022.3.22f1 VRChat SDK - 3.6.1
 
