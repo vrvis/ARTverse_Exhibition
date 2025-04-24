@@ -1,0 +1,19 @@
+#Flags
+[attr]lfs filter=lfs diff=lfs merge=lfs -text
+# Files
+*.xd lfs
+*.wav lfs
+*.jpg lfs
+*.psd lfs
+*.png lfs
+*.fbx lfs
+*.obj lfs
+*.blend lfs
+*.exr lfs
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.svg filter=lfs diff=lfs merge=lfs -text
+*.afphoto filter=lfs diff=lfs merge=lfs -text
+*.aup3 filter=lfs diff=lfs merge=lfs -text
+*.tga filter=lfs diff=lfs merge=lfs -text
+*.kra filter=lfs diff=lfs merge=lfs -text
+*.unity diff merge text
