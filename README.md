@@ -12,3 +12,42 @@ You can visit the VRChat World here: https://vrchat.com/home/launch?worldId=wrld
 
 Use the VRChat CreatorCompanion App to install the Unity Version, the VRChat SDK and open the project. Unity Version - 2022.3.22f1 VRChat SDK - 3.6.1
 
+The assets, prefabs and scripts developed for the ARTverse projects are in the "VRCDefaultWorldScene" scene. 
+
+VRChat uses Udon# and Udon Node Graph in a Unity project for developement. Here are the links for the documentation:
+Udon#
+https://udonsharp.docs.vrchat.com/
+Udon Node Graph
+https://creators.vrchat.com/worlds/udon/graph/
+Unity Documentation
+https://docs.unity.com/en-us
+
+For basic interactions follow these steps:
+
+How to make an Object "grabbable"?
+- Add "VRC Pickup" script component in it.
+
+How to add an U# script to an Object?
+1 - In the UdonSharp folder, click with the right button of the mouse and choose "Create" -> U# Script.
+This will Create both the U#Script and the correspondent "Udon C# Program Asset".
+2 - Add a "Udon Behaviour" scrip component in the game object.
+3- In The Udon Behaviour, choose the option "Udon C# Program Asset" in "Program Source".
+4- Drag and drop the Udon C# Program Asset that you created in the UdonSharp folder to the "Program Source" field.
+
+How to make a Game Object send event after interaction?
+This makes an object trig an event after button click:
+1- Add a "Udon Behaviour" scrip component in the game object.
+2- In The Udon Behaviour, choose the option "Udon Graph Program Asset" in "Program Source".
+3- Drag and drop the Udon Graph Program Asset called "SendEventOnInteract"* to the "Program Source" field.
+*You can find this asset in the InteractCube in the UdonExampleScene
+4 - Fill out the variables "target" and "eventName" with your game object and Udon Behavior.
+How to spawn Game Objects/Prefabs?
+1- You can either instantiate it via a VRC Object Pool or Instantiate using a Udon Behavior Graph
+
+Saving and Loading
+VRChat can only handle two types of files - plain text and JSON. Everything is read and written as string. The provided data structure can not handle objects of any kind (must write a parser if that is what you need).
+To read and write geometry - use basic meshes like cubes and spheres and save their transform data. References to materials (like in gltf) will not be possible at the current VRChat state.   
+
+Downloading Images
+Use a canvas and the build in loader. Put in the image path (ideally something like a github page).
+
